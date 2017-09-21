@@ -1,7 +1,7 @@
 
 [toc]
 
-#ELK 进行全文检索与条件查询
+# ELK 进行全文检索与条件查询
 
 应用场景：
 自动同步业务数据
@@ -10,9 +10,9 @@
 3.提供过滤 api,进行动态下拉检索；
 
 
-###部署 es
+### 部署 es
 
-####下载并且解压
+#### 下载并且解压
 
 ```aidl
     
@@ -28,23 +28,23 @@
     
 ```
 
-####启动 es
+#### 启动 es
 
-#####前台运行
+##### 前台运行
 ```$xslt
     ./bin/elasticsearch
 ```
 
-#####后台运行
+##### 后台运行
 ```$xslt
     ./bin/elasticsearch -d
 ```
 
 
 
-####安装es插件
+#### 安装es插件
 
-#####安装 x-Pack 插件
+##### 安装 x-Pack 插件
 
 ###### X-Pack是一个Elastic Stack的扩展，将安全，警报，监视，报告和图形功能包含在一个易于安装的软件包中。
 
@@ -224,7 +224,7 @@ curl -XPOST http://localhost:9200/index/fulltext/_search  -d'
 
 
 
-###部署 kibana ,数据的可视化展现
+### 部署 kibana ,数据的可视化展现
 
 ```aidl
     
@@ -257,7 +257,7 @@ curl -XPOST http://localhost:9200/index/fulltext/_search  -d'
 
 ```
 
-####部署 kibana插件 x-pack -正确打开方式
+#### 部署 kibana插件 x-pack -正确打开方式
 
 安装完成之后访问需要密码，默认的用户名：elastic，密码：changeme
 
@@ -269,7 +269,7 @@ curl -XPOST http://localhost:9200/index/fulltext/_search  -d'
 ```
 
 
-###部署 logstash ,数据采集
+### 部署 logstash ,数据采集
 
 ```aidl
 
@@ -299,7 +299,7 @@ curl -XPOST http://localhost:9200/index/fulltext/_search  -d'
 
 ```
 
-####部署 kibana插件 logstash-input-jdbc
+#### 部署 kibana插件 logstash-input-jdbc
 
 ```aidl
 
@@ -419,13 +419,13 @@ Supervisor 是一个用 Python 写的进程管理工具，可以很方便的用�
     
 ```
 
-###云化一键安装
+### 云化一键安装
 
 ```aidl
     bash <(curl -fsSL https://download.elastic.co/cloud/elastic-cloud-enterprise.sh) install
 ```
 
-####FAQ
+### FAQ
 ```$xslt
     官方 demo 示例
     http://demo.elastic.co/app/kibana
